@@ -305,7 +305,7 @@ blockquote {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
 
     a {
       i::before {
@@ -576,6 +576,26 @@ footer.sticky-bottom {
     text-align: right;
   }
 
+  h2.category {
+    color: var(--global-divider-color);
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  h4.category {
+    color: var(--global-divider-color);
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-weight: bold;
+  }
+
   ol.bibliography {
     list-style: none;
     padding: 0;
@@ -585,7 +605,9 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
-        width: 100%;
+        margin-top: 0.3rem;
+        margin-right: 0.5rem;
+        width: 118%;
         min-width: 80px;
         max-width: 200px;
       }
@@ -617,6 +639,7 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+        color: var(--global-theme-color)
       }
 
       .author {

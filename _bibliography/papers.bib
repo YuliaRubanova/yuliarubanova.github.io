@@ -3,82 +3,201 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+
+@InProceedings{pmlr-v205-allen23a,
+  title = 	 {Graph network simulators can learn discontinuous, rigid contact dynamics},
+  author =       {Allen, Kelsey R and Guevara, Tatiana Lopez and Rubanova, Yulia and Stachenfeld, Kim and Sanchez-Gonzalez, Alvaro and Battaglia, Peter and Pfaff, Tobias},
+  booktitle = 	 {CoRL},
+  pages = 	 {1157--1167},
+  year = 	 {2022},
+  editor = 	 {Liu, Karen and Kulic, Dana and Ichnowski, Jeff},
+  volume = 	 {205},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v205/allen23a/allen23a.pdf},
+  url = 	 {https://proceedings.mlr.press/v205/allen23a.html},
+  abstract = 	 {Recent years have seen a rise in techniques for modeling discontinuous dynamics, such as rigid contact or switching motion modes, using deep learning. A common claim is that deep networks are incapable of accurately modeling rigid-body dynamics without explicit modules for handling contacts, due to the continuous nature of how deep networks are parameterized. Here we investigate this claim with experiments on established real and simulated datasets and show that general-purpose graph network simulators, with no contact-specific assumptions, can learn and predict contact discontinuities. Furthermore, contact dynamics learned by graph network simulators capture real-world cube tossing trajectories more accurately than highly engineered robotics simulators, even when provided with only 8 – 16 trajectories. Overall, this suggests that rigid-body dynamics do not pose a fundamental challenge for deep networks with the appropriate general architecture and parameterization.  Instead, our work opens new directions for considering when deep learning-based models might be preferable to traditional simulation environments for accurately modeling real-world contact dynamics.},
+  category={Learned simulation},
+  preview={corl_rigids.gif}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+
+@InProceedings{pmlr-v198-ibarz22a,
+  title = 	 {A Generalist Neural Algorithmic Learner},
+  author =       {Ibarz, Borja and Kurin, Vitaly and Papamakarios, George and Nikiforou, Kyriacos and Bennani, Mehdi and Csord{\'a}s, R{\'o}bert and Dudzik, Andrew Joseph and Bo{\v s}njak, Matko and Vitvitskyi, Alex and Rubanova, Yulia and Deac, Andreea and Bevilacqua, Beatrice and Ganin, Yaroslav and Blundell, Charles and Veli{\v c}kovi{\' c}, Petar},
+  booktitle = 	 {Learning on Graphs},
+  pages = 	 {2:1--2:23},
+  year = 	 {2022},
+  editor = 	 {Rieck, Bastian and Pascanu, Razvan},
+  volume = 	 {198},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v198/ibarz22a/ibarz22a.pdf},
+  url = 	 {https://proceedings.mlr.press/v198/ibarz22a.html},
+  abstract = 	 {The cornerstone of neural algorithmic reasoning is the ability to solve algorithmic tasks, especially in a way that generalises out of distribution. While recent years have seen a surge in methodological improvements in this area, they mostly focused on building specialist models. Specialist models are capable of learning to neurally execute either only one algorithm or a collection of algorithms with identical control-flow backbone. Here, instead, we focus on constructing a generalist neural algorithmic learner—a single graph neural network processor capable of learning to execute a wide range of algorithms, such as sorting, searching, dynamic programming, path-finding and geometry. We leverage the CLRS benchmark to empirically show that, much like recent successes in the domain of perception, generalist algorithmic learners can be built by "incorporating" knowledge. That is, it is possible to effectively learn algorithms in a multi-task manner, so long as we can learn to execute them well in a single-task regime. Motivated by this, we present a series of improvements to the input representation, training regime and processor architecture over CLRS, improving average single-task performance by over 20% from prior art. We then conduct a thorough ablation of multi-task learners leveraging these improvements. Our results demonstrate a generalist learner that effectively incorporates knowledge captured by specialist models.},
+  category={Graph Networks},
+  preview={generalist_learner.png}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={true}
+@article{gerstung2023evolutionary,
+  title={The evolutionary history of 2,658 cancers},
+  author={Gerstung, Moritz and Jolly, Clemency and Leshchiner, Ignaty and Dentro, Stefan C and Gonzalez, Santiago and Rosebrock, Daniel and Mitchell, Thomas J and Rubanova, Yulia and Anur, Pavana and Yu, Kaixian and others},
+  journal={Nature},
+  year={2020},
+  volume = 	 {578},
+  pages = {122},
+  publisher={NATURE PORTFOLIO HEIDELBERGER PLATZ 3, BERLIN, 14197, GERMANY},
+  category={Cancer modelling},
+  pdf={https://www.nature.com/articles/s41586-019-1907-7},
+  abstract={Cancer develops through a process of somatic evolution1,2. Sequencing data from a single biopsy represent a snapshot of this process that can reveal the timing of specific genomic aberrations and the changing influence of mutational processes3. Here, by whole-genome sequencing analysis of 2,658 cancers as part of the Pan-Cancer Analysis of Whole Genomes (PCAWG) Consortium of the International Cancer Genome Consortium (ICGC) and The Cancer Genome Atlas (TCGA)4, we reconstruct the life history and evolution of mutational processes and driver mutation sequences of 38 types of cancer. Early oncogenesis is characterized by mutations in a constrained set of driver genes, and specific copy number gains, such as trisomy 7 in glioblastoma and isochromosome 17q in medulloblastoma. The mutational spectrum changes significantly throughout tumour evolution in 40% of samples. A nearly fourfold diversification of driver genes and increased genomic instability are features of later stages. Copy number alterations often occur in mitotic crises, and lead to simultaneous gains of chromosomal segments. Timing analyses suggest that driver mutations often precede diagnosis by many years, if not decades. Together, these results determine the evolutionary trajectories of cancer, and highlight opportunities for early cancer detection.},
+  preview={evolutionary.jpg}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@inproceedings{
+allen2023learning,
+title={Learning rigid dynamics with face interaction graph networks},
+author={Kelsey R Allen* and Yulia Rubanova* and Tatiana Lopez-Guevara and William F Whitney and Alvaro Sanchez-Gonzalez and Peter Battaglia and Tobias Pfaff},
+booktitle={ICLR},
+year={2023},
+url={https://openreview.net/forum?id=J7Uh781A05p},
+selected={true},
+category={Learned simulation},
+abstract={Simulating rigid collisions among arbitrary shapes is notoriously difficult due to complex geometry and the strong non-linearity of the interactions. While graph neural network (GNN)-based models are effective at learning to simulate complex physical dynamics, such as fluids, cloth and articulated bodies, they have been less effective and efficient on rigid-body physics, except with very simple shapes. Existing methods that model collisions through the meshes' nodes are often inaccurate because they struggle when collisions occur on faces far from nodes. Alternative approaches that represent the geometry densely with many particles are prohibitively expensive for complex shapes. Here we introduce the Face Interaction Graph Network (FIGNet) which extends beyond GNN-based methods, and computes interactions between mesh faces, rather than nodes. Compared to learned node- and particle-based methods, FIGNet is around 4x more accurate in simulating complex shape interactions, while also 8x more computationally efficient on sparse, rigid meshes. Moreover, FIGNet can learn frictional dynamics directly from real-world data, and can be more accurate than analytical solvers given modest amounts of training data. FIGNet represents a key step forward in one of the few remaining physical domains which have seen little competition from learned simulators, and offers allied fields such as robotics, graphics and mechanical design a new tool for simulation and model-based planning.},
+pdf={https://openreview.net/forum?id=J7Uh781A05p},
+preview={face_interaction4.png}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+
+@InProceedings{pmlr-v162-rubanova22a,
+  title = 	 {Constraint-based graph network simulator},
+  author =       {Yulia Rubanova* and Alvaro Sanchez-Gonzalez* and Tobias Pfaff and Peter Battaglia},
+  booktitle = 	 {ICML},
+  pages = 	 {18844--18870},
+  year = 	 {2022},
+  editor = 	 {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  volume = 	 {162},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v162/rubanova22a/rubanova22a.pdf},
+  url = 	 {https://proceedings.mlr.press/v162/rubanova22a.html},
+  abstract = 	 {In the area of physical simulations, nearly all neural-network-based methods directly predict future states from the input states. However, many traditional simulation engines instead model the constraints of the system and select the state which satisfies them. Here we present a framework for constraint-based learned simulation, where a scalar constraint function is implemented as a graph neural network, and future predictions are computed by solving the optimization problem defined by the learned constraint. Our model achieves comparable or better accuracy to top learned simulators on a variety of challenging physical domains, and offers several unique advantages. We can improve the simulation accuracy on a larger system by applying more solver iterations at test time. We also can incorporate novel hand-designed constraints at test time and simulate new dynamics which were not present in the training data. Our constraint-based framework shows how key techniques from traditional simulation and numerical methods can be leveraged as inductive biases in machine learning simulators.},
+  selected={true},
+  category={Learned simulation},
+  preview={constraint.png}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{
+  godwin2022simple,
+  title={Simple {GNN} Regularisation for 3D Molecular Property Prediction and Beyond},
+  author={Jonathan Godwin and Michael Schaarschmidt and Alexander L Gaunt and Alvaro Sanchez-Gonzalez and Yulia Rubanova and Petar Veli{\v{c}}kovi{\'c} and James Kirkpatrick and Peter Battaglia},
+  booktitle={ICLR},
+  year={2022},
+  pdf={https://openreview.net/forum?id=1wVvweK3oIb},
+  category={Graph Networks},
+  pdf={https://openreview.net/forum?id=1wVvweK3oIb},
+  preview={noisy_nodes.png},
+  abstract={In this paper we show that simple noise regularisation can be an effective way to address GNN oversmoothing. First we argue that regularisers addressing oversmoothing should both penalise node latent similarity and encourage meaningful node representations. From this observation we derive "Noisy Nodes", a simple technique in which we corrupt the input graph with noise, and add a noise correcting node-level loss. The diverse node level loss encourages latent node diversity, and the denoising objective encourages graph manifold learning. Our regulariser applies well-studied methods in simple, straightforward ways which allow even generic architectures to overcome oversmoothing and achieve state of the art results on quantum chemistry tasks, and improve results significantly on Open Graph Benchmark (OGB) datasets. Our results suggest Noisy Nodes can serve as a complementary building block in the GNN toolkit.}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+
+@article{DENTRO20212239,
+title = {Characterizing genetic intra-tumor heterogeneity across 2,658 human cancer genomes},
+journal = {Cell},
+volume = {184},
+number = {8},
+pages = {2239-2254.e39},
+year = {2021},
+issn = {0092-8674},
+doi = {https://doi.org/10.1016/j.cell.2021.03.009},
+url = {https://www.sciencedirect.com/science/article/pii/S0092867421002944},
+author = {Stefan C. Dentro and Ignaty Leshchiner and Kerstin Haase and Maxime Tarabichi and Jeff Wintersinger and Amit G. Deshwar and Kaixian Yu and Yulia Rubanova and Geoff Macintyre and Jonas Demeulemeester and Ignacio Vázquez-García and Kortine Kleinheinz and Dimitri G. Livitz and Salem Malikic and Nilgun Donmez and Subhajit Sengupta and Pavana Anur and Clemency Jolly and Marek Cmero and Daniel Rosebrock and Steven E. Schumacher and Yu Fan and Matthew Fittall and Ruben M. Drews and Xiaotong Yao and Thomas B.K. Watkins and Juhee Lee and Matthias Schlesner and Hongtu Zhu and David J. Adams and Nicholas McGranahan and Charles Swanton and Gad Getz and Paul C. Boutros and Marcin Imielinski and Rameen Beroukhim and S. Cenk Sahinalp and Yuan Ji and Martin Peifer and Inigo Martincorena and Florian Markowetz and Ville Mustonen and Ke Yuan and Moritz Gerstung and Paul T. Spellman and Wenyi Wang and Quaid D. Morris and David C. Wedge and Peter {Van Loo}},
+keywords = {whole-genome sequencing, pan-cancer genomics, intra-tumor heterogeneity, cancer driver genes, cancer evolution, tumor phylogeny, subclonal reconstruction, branching evolution},
+abstract = {Intra-tumor heterogeneity (ITH) is a mechanism of therapeutic resistance and therefore an important clinical challenge. However, the extent, origin, and drivers of ITH across cancer types are poorly understood. To address this, we extensively characterize ITH across whole-genome sequences of 2,658 cancer samples spanning 38 cancer types. Nearly all informative samples (95.1%) contain evidence of distinct subclonal expansions with frequent branching relationships between subclones. We observe positive selection of subclonal driver mutations across most cancer types and identify cancer type-specific subclonal patterns of driver gene mutations, fusions, structural variants, and copy number alterations as well as dynamic changes in mutational processes between subclonal expansions. Our results underline the importance of ITH and its drivers in tumor evolution and provide a pan-cancer resource of comprehensively annotated subclonal events from whole-genome sequencing data.},
+category={Cancer modelling},
+pdf={https://www.sciencedirect.com/science/article/pii/S0092867421002944},
+preview={heterogeneity.jpg}
+}
+
+
+@InProceedings{pmlr-v124-swersky20a,
+  title = 	 {Amortized Bayesian Optimization over Discrete Spaces},
+  author =       { Rubanova, Yulia and Dohan, David and Swersky, Kevin and Murphy, Kevin},
+  booktitle = 	 {UAI},
+  pages = 	 {769--778},
+  year = 	 {2020},
+  editor = 	 {Peters, Jonas and Sontag, David},
+  volume = 	 {124},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v124/swersky20a/swersky20a.pdf},
+  url = 	 {https://proceedings.mlr.press/v124/swersky20a.html},
+  abstract = 	 {Bayesian optimization is a principled approach for globally optimizing expensive, black-box functions by using a surrogate model of the objective. However, each step of Bayesian optimization involves solving an inner optimization problem, in which we maximize an acquisition function  derived from the surrogate model to decide where to query next. This inner problem can be challenging to solve, particularly in discrete spaces, such as protein sequences or molecular graphs, where gradient-based optimization cannot be used. Our key insight is that we can train a generative model to generate candidates that maximize the acquisition function. This is faster than standard model-free local search methods, since we can amortize the cost of learning the model across multiple rounds of Bayesian optimization. We therefore call this Amortized Bayesian Optimization. On several challenging discrete design problems, we show this method generally outperforms other methods at optimizing the inner acquisition function, resulting in more efficient optimization of the outer black-box objective.},
+  selected={true},
+  category={Discrete optimization},
+  preview={amortised.png}
+}
+
+@article{rubanova2020reconstructing,
+  title={Reconstructing evolutionary trajectories of mutation signature activities in cancer using TrackSig},
+  author={Rubanova, Yulia and Shi, Ruian and Harrigan, Caitlin F and Li, Roujia and Wintersinger, Jeff and Sahin, Nil and Deshwar, Amit G and Morris, Quaid D},
+  journal={Nature communications},
+  volume={11},
+  number={1},
+  pages={731},
+  year={2020},
+  publisher={Nature Publishing Group UK London},
+  selected={true},
+  category={Cancer modelling},
+  preview={tracksig.png},
+  pdf={https://www.nature.com/articles/s41467-020-14352-7}
+}
+
+@inbook{doi:10.1142/9789811215636_0022,
+author = { Caitlin F   Harrigan  and  Yulia   Rubanova  and  Quaid   Morris  and  Alina   Selega },
+title = {TrackSigFreq: subclonal reconstructions based on mutation signatures and allele frequencies},
+booktitle = {Biocomputing 2020},
+chapter = {},
+pages = {238-249},
+doi = {10.1142/9789811215636_0022},
+URL = {https://www.worldscientific.com/doi/abs/10.1142/9789811215636_0022},
+eprint = {https://www.worldscientific.com/doi/pdf/10.1142/9789811215636_0022},
+    abstract = { Mutational signatures are patterns of mutation types, many of which are linked to known mutagenic processes. Signature activity represents the proportion of mutations a signature generates. In cancer, cells may gain advantageous phenotypes through mutation accumulation, causing rapid growth of that subpopulation within the tumour. The presence of many subclones can make cancers harder to treat and have other clinical implications. Reconstructing changes in signature activities can give insight into the evolution of cells within a tumour. Recently, we introduced a new method, TrackSig, to detect changes in signature activities across time from single bulk tumour sample. By design, TrackSig is unable to identify mutation populations with different frequencies but little to no difference in signature activity. Here we present an extension of this method, TrackSigFreq, which enables trajectory reconstruction based on both observed density of mutation frequencies and changes in mutational signature activities. TrackSigFreq preserves the advantages of TrackSig, namely optimal and rapid mutation clustering through segmentation, while extending it so that it can identify distinct mutation populations that share similar signature activities.},
+  category={Cancer modelling},
+  preview={tracksigfreq.png}
+}
+
+
+@inproceedings{NEURIPS2019_42a6845a,
+ author = {Rubanova, Yulia and Chen, Ricky T. Q. and Duvenaud, David K},
+ booktitle = {NeurIPS},
+ editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Latent Ordinary Differential Equations for Irregularly-Sampled Time Series},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/42a6845a557bef704ad8ac9cb4461d43-Paper.pdf},
+ volume = {32},
+ year = {2019},
+ selected={true},
+  category={Neural ODE},
+  pdf={https://papers.nips.cc/paper_files/paper/2019/hash/42a6845a557bef704ad8ac9cb4461d43-Abstract.html},
+  abstract={Time series with non-uniform intervals occur in many applications, and are difficult to model using standard recurrent neural networks (RNNs). We generalize RNNs to have continuous-time hidden dynamics defined by ordinary differential equations (ODEs), a model we call ODE-RNNs. Furthermore, we use ODE-RNNs to replace the recognition network of the recently-proposed Latent ODE model. Both ODE-RNNs and Latent ODEs can naturally handle arbitrary time gaps between observations, and can explicitly model the probability of observation times using Poisson processes. We show experimentally that these ODE-based models outperform their RNN-based counterparts on irregularly-sampled data.},
+  preview={latent_ode.png}
+}
+
+
+@inproceedings{NEURIPS2018_69386f6b,
+ author = {Ricky T. Q. Chen* and Yulia Rubanova* and Jesse Bettencourt and David Duvenaud},
+ booktitle = {NeurIPS},
+ editor = {S. Bengio and H. Wallach and H. Larochelle and K. Grauman and N. Cesa-Bianchi and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Neural Ordinary Differential Equations},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2018/file/69386f6bb1dfed68692a24c8686939b9-Paper.pdf},
+ volume = {31},
+ year = {2018},
+ selected={true},
+  category={Neural ODE},
+abstract={We introduce a new family of deep neural network models. Instead of specifying a discrete sequence of hidden layers, we parameterize the derivative of the hidden state using a neural network. The output of the network is computed using a blackbox differential equation solver. These continuous-depth models have constant memory cost, adapt their evaluation strategy to each input, and can explicitly trade numerical precision for speed. We demonstrate these properties in continuous-depth residual networks and continuous-time latent variable models. We also construct continuous normalizing flows, a generative model that can train by maximum likelihood, without partitioning or ordering the data dimensions. For training, we show how to scalably backpropagate through any ODE solver, without access to its internal operations. This allows end-to-end training of ODEs within larger models.},
+pdf={https://papers.nips.cc/paper_files/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html},
+preview={neural_ode.png}
 }
