@@ -6,19 +6,19 @@
  * Themes
  ******************************************************************************/
 :root {
-  --global-bg-color: #ffffff;
+  --global-bg-color: #fcfcfc;
   --global-code-bg-color: rgba(181, 9, 172, 0.05);
   --global-text-color: #000000;
   --global-text-color-light: #828282;
-  --global-theme-color: #B509AC;
+  --global-theme-color: #00369f;
   --global-hover-color: #B509AC;
-  --global-hover-text-color: #ffffff;
+  --global-hover-text-color: #fcfcfc;
   --global-footer-bg-color: #1C1C1D;
   --global-footer-text-color: #e8e8e8;
-  --global-footer-link-color: #ffffff;
+  --global-footer-link-color: #fcfcfc;
   --global-distill-app-color: #828282;
-  --global-divider-color: rgba(0,0,0,.1);
-  --global-card-bg-color: #ffffff;
+  --global-divider-color: rgba(108, 108, 127, 0.657);
+  --global-card-bg-color: #fcfcfc;
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
@@ -54,7 +54,7 @@ html[data-theme=dark] {
   --global-text-color-light: #e8e8e8;
   --global-theme-color: #2698BA;
   --global-hover-color: #2698BA;
-  --global-hover-text-color: #ffffff;
+  --global-hover-text-color: #fcfcfc;
   --global-footer-bg-color: #e8e8e8;
   --global-footer-text-color: #1C1C1D;
   --global-footer-link-color: #000000;
@@ -367,7 +367,7 @@ blockquote {
   text-align: center;
 }
 .social .contact-icons {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 .social .contact-icons a i::before {
   color: var(--global-text-color);
@@ -503,7 +503,7 @@ footer.sticky-bottom {
   color: #000000;
 }
 .pagination .page-item.active .page-link {
-  color: #ffffff;
+  color: #fcfcfc;
   background-color: var(--global-theme-color);
 }
 .pagination .page-item.active .page-link:hover {
@@ -570,6 +570,24 @@ footer.sticky-bottom {
   margin-bottom: -2rem;
   text-align: right;
 }
+.publications h2.category {
+  color: var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  text-align: right;
+  font-weight: bold;
+}
+.publications h4.category {
+  color: var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+}
 .publications ol.bibliography {
   list-style: none;
   padding: 0;
@@ -579,7 +597,9 @@ footer.sticky-bottom {
   margin-bottom: 1rem;
 }
 .publications ol.bibliography li .preview {
-  width: 100%;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+  width: 118%;
   min-width: 80px;
   max-width: 200px;
 }
@@ -605,6 +625,7 @@ footer.sticky-bottom {
 }
 .publications ol.bibliography li .title {
   font-weight: bolder;
+  color: var(--global-theme-color);
 }
 .publications ol.bibliography li .author a {
   border-bottom: 1px dashed var(--global-theme-color);
