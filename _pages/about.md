@@ -14,12 +14,16 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I am a Research Scientist at Google Deepmind in the Structured Intelligence team led by Peter Battaglia.
+I am a Senior Research Scientist at Google Deepmind, working on **video generation** with [Veo](https://deepmind.google/technologies/veo/).
 
-Current my work is on teaching the networks to simulate the physics of the real world, as the path to make agents that are aware of the 3D world and physical interactions in it, so that they are able to reason about real objects and environments with different physical properties.
+I am interested in *controllable* and *structured* generative models for images and video.
 
+- physically realistic generation, temporal consistency,
+- extracting 3D information from images and video
+- using them for real-world applications, e.g. as world models for robotics
+- my previous interests also include physical simulations from 3D states and modelling rigid objects
 
-More broadly, my work is focused on fusing classic methods from physics and computer graphics into deep learning models, to make them learn more structured, efficient and interpretable represations of the real world.
+Previously, I worked on **Learning Simulation**, i.e. learning physics of everyday objects from real data using graph neural networks.
 
-I completed my PhD in University of Toronto, supervised by Quaid Morris. I worked on Neural ODE for irregularly-spaced time series (advised by David Duvenaud) and on modelling cancer evolution through time. During my PhD, I did three internships at Google Brain working on optimization of discrete objects in 2019-2020 and DeepVariant in 2018.
+I completed my PhD in University of Toronto, supervised by Quaid Morris. I worked on Neural ODE for irregularly-spaced time series (advised by David Duvenaud) and on modelling cancer evolution through time. During my PhD, I did a few internships at Google Brain working on optimization of discrete objects in 2019-2020 and DeepVariant in 2018.
 

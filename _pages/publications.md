@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: Publications
 description: 
-categories: [Learned simulation, Graph Networks,Neural ODE, Cancer modelling, Discrete optimization]
+categories: [Vision, Learned simulation, Graph Networks,Neural ODE, Cancer modelling, Discrete optimization]
 nav: true
 nav_order: 1
 sort_field: date
