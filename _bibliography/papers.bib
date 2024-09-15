@@ -12,10 +12,12 @@
       eprint={2406.09292},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2406.09292}, 
+      website={https://neural-assets-paper.github.io/}, 
       preview={neural_assets.gif},
       category={Vision},
       selected={true},
+      pdf={https://arxiv.org/abs/2406.09292},
+      abstract={We address the problem of multi-object 3D pose control in image diffusion models. Instead of conditioning on a sequence of text tokens, we propose to use a set of per-object representations, Neural Assets, to control the 3D pose of individual objects in a scene. Neural Assets are obtained by pooling visual representations of objects from a reference image, such as a frame in a video, and are trained to reconstruct the respective objects in a different image, e.g., a later frame in the video. Importantly, we encode object visuals from the reference image while conditioning on object poses from the target frame. This enables learning disentangled appearance and pose features. Combining visual and 3D pose representations in a sequence-of-tokens format allows us to keep the text-to-image architecture of existing models, with Neural Assets in place of text tokens. By fine-tuning a pre-trained text-to-image diffusion model with this information, our approach enables fine-grained 3D pose and placement control of individual objects in a scene. We further demonstrate that Neural Assets can be transferred and recomposed across different scenes. Our model achieves state-of-the-art multi-object editing results on both synthetic 3D scene datasets, as well as two real-world video datasets (Objectron, Waymo Open).},
 }
 
 
@@ -30,6 +32,10 @@
       preview={sdf_sim.gif},
       category={Learned simulation},
       selected={true},
+      pdf={https://arxiv.org/abs/2405.14045},
+      abstract={Simulating large scenes with many rigid objects is crucial for a variety of applications, such as robotics, engineering, film and video games. Rigid interactions are notoriously hard to model: small changes to the initial state or the simulation parameters can lead to large changes in the final state. Recently, learned simulators based on graph networks (GNNs) were developed as an alternative to hand-designed simulators like MuJoCo and PyBullet. They are able to accurately capture dynamics of real objects directly from real-world observations. However, current state-of-the-art learned simulators operate on meshes and scale poorly to scenes with many objects or detailed shapes. Here we present SDF-Sim, the first learned rigid-body simulator designed for scale. We use learned signed-distance functions (SDFs) to represent the object shapes and to speed up distance computation. We design the simulator to leverage SDFs and avoid the fundamental bottleneck of the previous simulators associated with collision detection. For the first time in literature, we demonstrate that we can scale the GNN-based simulators to scenes with hundreds of objects and up to 1.1 million nodes, where mesh-based approaches run out of memory. Finally, we show that SDF-Sim can be applied to real world scenes by extracting SDFs from multi-view images.},
+      website={https://sites.google.com/view/sdf-sim},
+
 }
 
 
@@ -39,10 +45,12 @@
   author={William F Whitney and Tatiana Lopez-Guevara and Tobias Pfaff and Yulia Rubanova and Thomas Kipf and Kim Stachenfeld and Kelsey R Allen},
   booktitle={The Twelfth International Conference on Learning Representations},
   year={2024},
-  url={https://sites.google.com/view/latent-dynamics},
+  website={https://sites.google.com/view/latent-dynamics},
   preview={vpd.gif},
   category={Learned simulation},
   selected={true},
+  pdf={https://arxiv.org/abs/2312.05359},
+  abstract={Realistic simulation is critical for applications ranging from robotics to animation. Traditional analytic simulators sometimes struggle to capture sufficiently realistic simulation which can lead to problems including the well known "sim-to-real" gap in robotics. Learned simulators have emerged as an alternative for better capturing real-world physical dynamics, but require access to privileged ground truth physics information such as precise object geometry or particle tracks. Here we propose a method for learning simulators directly from observations. Visual Particle Dynamics (VPD) jointly learns a latent particle-based representation of 3D scenes, a neural simulator of the latent particle dynamics, and a renderer that can produce images of the scene from arbitrary views. VPD learns end to end from posed RGB-D videos and does not require access to privileged information. Unlike existing 2D video prediction models, we show that VPD's 3D structure enables scene editing and long-term predictions. These results pave the way for downstream applications ranging from video editing to robotic planning.},
 }
 
 
@@ -56,6 +64,7 @@
       url={https://arxiv.org/abs/2401.11985}, 
       preview={fignetstar.gif},
       category={Learned simulation},
+      website={https://sites.google.com/view/fignetstar/},
 }
 
 
@@ -115,11 +124,13 @@ author={Kelsey R Allen* and Yulia Rubanova* and Tatiana Lopez-Guevara and Willia
 booktitle={ICLR},
 year={2023},
 url={https://openreview.net/forum?id=J7Uh781A05p},
+website={https://sites.google.com/view/fig-net},
 selected={true},
 category={Learned simulation},
 abstract={Simulating rigid collisions among arbitrary shapes is notoriously difficult due to complex geometry and the strong non-linearity of the interactions. While graph neural network (GNN)-based models are effective at learning to simulate complex physical dynamics, such as fluids, cloth and articulated bodies, they have been less effective and efficient on rigid-body physics, except with very simple shapes. Existing methods that model collisions through the meshes' nodes are often inaccurate because they struggle when collisions occur on faces far from nodes. Alternative approaches that represent the geometry densely with many particles are prohibitively expensive for complex shapes. Here we introduce the Face Interaction Graph Network (FIGNet) which extends beyond GNN-based methods, and computes interactions between mesh faces, rather than nodes. Compared to learned node- and particle-based methods, FIGNet is around 4x more accurate in simulating complex shape interactions, while also 8x more computationally efficient on sparse, rigid meshes. Moreover, FIGNet can learn frictional dynamics directly from real-world data, and can be more accurate than analytical solvers given modest amounts of training data. FIGNet represents a key step forward in one of the few remaining physical domains which have seen little competition from learned simulators, and offers allied fields such as robotics, graphics and mechanical design a new tool for simulation and model-based planning.},
 pdf={https://openreview.net/forum?id=J7Uh781A05p},
-preview={FIGNet_0002.gif}
+preview={FIGNet_0002.gif},
+code={https://github.com/jongyaoY/fignet},
 }
 
 
@@ -138,7 +149,8 @@ preview={FIGNet_0002.gif}
   abstract = 	 {In the area of physical simulations, nearly all neural-network-based methods directly predict future states from the input states. However, many traditional simulation engines instead model the constraints of the system and select the state which satisfies them. Here we present a framework for constraint-based learned simulation, where a scalar constraint function is implemented as a graph neural network, and future predictions are computed by solving the optimization problem defined by the learned constraint. Our model achieves comparable or better accuracy to top learned simulators on a variety of challenging physical domains, and offers several unique advantages. We can improve the simulation accuracy on a larger system by applying more solver iterations at test time. We also can incorporate novel hand-designed constraints at test time and simulate new dynamics which were not present in the training data. Our constraint-based framework shows how key techniques from traditional simulation and numerical methods can be leveraged as inductive biases in machine learning simulators.},
   selected={true},
   category={Learned simulation},
-  preview={constraint.png}
+  preview={constraint.png},
+  website={https://sites.google.com/view/constraint-based-simulator},
 }
 
 @inproceedings{
@@ -234,7 +246,8 @@ eprint = {https://www.worldscientific.com/doi/pdf/10.1142/9789811215636_0022},
   category={Neural ODE},
   pdf={https://papers.nips.cc/paper_files/paper/2019/hash/42a6845a557bef704ad8ac9cb4461d43-Abstract.html},
   abstract={Time series with non-uniform intervals occur in many applications, and are difficult to model using standard recurrent neural networks (RNNs). We generalize RNNs to have continuous-time hidden dynamics defined by ordinary differential equations (ODEs), a model we call ODE-RNNs. Furthermore, we use ODE-RNNs to replace the recognition network of the recently-proposed Latent ODE model. Both ODE-RNNs and Latent ODEs can naturally handle arbitrary time gaps between observations, and can explicitly model the probability of observation times using Poisson processes. We show experimentally that these ODE-based models outperform their RNN-based counterparts on irregularly-sampled data.},
-  preview={latent_ode.png}
+  preview={latent_ode.png},
+  code={https://github.com/YuliaRubanova/latent_ode},
 }
 
 
@@ -252,5 +265,6 @@ eprint = {https://www.worldscientific.com/doi/pdf/10.1142/9789811215636_0022},
   category={Neural ODE},
 abstract={We introduce a new family of deep neural network models. Instead of specifying a discrete sequence of hidden layers, we parameterize the derivative of the hidden state using a neural network. The output of the network is computed using a blackbox differential equation solver. These continuous-depth models have constant memory cost, adapt their evaluation strategy to each input, and can explicitly trade numerical precision for speed. We demonstrate these properties in continuous-depth residual networks and continuous-time latent variable models. We also construct continuous normalizing flows, a generative model that can train by maximum likelihood, without partitioning or ordering the data dimensions. For training, we show how to scalably backpropagate through any ODE solver, without access to its internal operations. This allows end-to-end training of ODEs within larger models.},
 pdf={https://papers.nips.cc/paper_files/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html},
-preview={neural_ode.png}
+preview={neural_ode.png},
+code={https://github.com/rtqichen/torchdiffeq},
 }
