@@ -54,11 +54,12 @@
           <img src="{{ home.profile.image | relative_url }}" alt="{{ home.profile.name }}">
           <div>
             <h2>{{ home.profile.role }}, {{ home.profile.affiliation }}</h2>
-            <p>Previously University of Toronto and Google Brain.</p>
+            <p>Based in {{ home.profile.location }}. Previously University of Toronto and Google Brain.</p>
             <ul class="profile-links">
               {%- for link in home.profile.links -%}
                 <li><a href="{{ link.url }}">{{ link.label }}</a></li>
               {%- endfor -%}
+              <li><a href="mailto:{{ contact_email }}">Email</a></li>
             </ul>
           </div>
         </aside>
@@ -98,7 +99,7 @@
             {%- assign image = paper.media | default: paper.image -%}
             {%- assign media_link = paper.image_link | default: paper.link -%}
             <article class="paper-card">
-              <a class="paper-image" href="{{ media_link }}" aria-label="{{ paper.title }}">
+              <a class="paper-image{% if paper.crop_top %} paper-image-crop-top{% endif %}" href="{{ media_link }}" aria-label="{{ paper.title }}">
                 {%- if paper.media_type == 'video' -%}
                   <video autoplay loop muted playsinline aria-label="{{ paper.image_alt }}">
                     <source src="{{ image }}" type="video/mp4">

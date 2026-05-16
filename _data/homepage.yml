@@ -4,7 +4,7 @@ profile:
   affiliation: Google DeepMind
   location: London, UK
   image: assets/img/yulia_photo.JPG
-  email: "yul [~dot] rubanova [~at] gmail [~dot]com"
+  email: "yul [~dot] rubanova [~at] gmail [~dot] com"
   links:
     - label: Google Scholar
       url: "https://scholar.google.com/citations?user=u_HzE9wAAAAJ&hl=en"
@@ -19,7 +19,7 @@ intro:
   eyebrow: Staff Research Scientist · Google DeepMind
   title: Yulia Rubanova
   topics:
-    - Video generative models
+    - Video generation
     - Controllability
     - Personalisation
     - Physical reasoning
@@ -64,12 +64,13 @@ papers:
     category: Veo world simulator
     media: "https://veo-robotics.github.io/static/videos/banner/banner-nominal.mp4"
     media_type: video
+    crop_top: true
     image_alt: Veo world simulator robot policy evaluation demo
     link: "https://arxiv.org/abs/2512.10675"
     project_link: "https://veo-robotics.github.io/"
     impact: Shows Veo can become a scalable robotics evaluation environment, predicting policy rankings, out-of-distribution failures, and safety issues across 1600+ real-world trials.
   - title: "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer"
-    authors: Gemini Robotics Team and 171 other authors
+    authors: Gemini Robotics Team
     venue: arXiv preprint
     year: 2025
     date: October 2025
@@ -150,7 +151,7 @@ papers:
     venue: Advances in Neural Information Processing Systems 32
     year: 2019
     date: NeurIPS 2019
-    category: Neural ODE
+    category: Latent ODE
     image: assets/img/publication_preview/latent_ode.png
     image_alt: Latent ODE preview
     link: "https://proceedings.neurips.cc/paper_files/paper/2019/hash/42a6845a557bef704ad8ac9cb4461d43-Abstract.html"
@@ -161,7 +162,7 @@ papers:
     venue: Advances in Neural Information Processing Systems 31
     year: 2018
     date: NeurIPS 2018 · Best Paper Award
-    category: Foundations
+    category: Neural ODE
     image: assets/img/publication_preview/neural_ode.png
     image_alt: Neural ODE preview
     link: "https://proceedings.neurips.cc/paper_files/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html"

@@ -77,14 +77,6 @@ a:hover {
   font-size: 15px;
 }
 
-.site-nav a:last-child {
-  color: #ffffff;
-  background: var(--ink);
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: 720;
-}
-
 main {
   max-width: 1440px;
   margin: 0 auto;
@@ -372,6 +364,7 @@ h1 {
 
 .paper-image {
   display: block;
+  overflow: hidden;
   border-right: 1px solid var(--line);
   background: var(--soft);
 }
@@ -383,6 +376,12 @@ h1 {
   min-height: 178px;
   display: block;
   object-fit: cover;
+}
+
+.paper-image-crop-top video {
+  height: calc(100% + 48px);
+  min-height: 226px;
+  transform: translateY(-48px);
 }
 
 .paper-copy {
