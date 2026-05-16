@@ -1,0 +1,113 @@
+---
+---
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.data.homepage.profile.name }}</title>
+    <meta name="description" content="{{ site.data.homepage.intro.summary | strip_html | escape }}">
+    <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
+  </head>
+  <body>
+    {%- assign home = site.data.homepage -%}
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ home.profile.name }} home">
+        <span class="brand-mark">YR</span>
+        <span>{{ home.profile.name }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#project">Core project</a>
+        <a href="#work">Selected work</a>
+        <a href="mailto:{{ site.email | replace: ' [~at~] ', '@' | replace: ' [~dot~] ', '.' }}">Get in touch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">{{ home.intro.eyebrow }}</p>
+          <h1 id="page-title">{{ home.intro.title }}</h1>
+          <p class="topic-line">
+            {%- for topic in home.intro.topics -%}
+              <span>{{ topic }}</span>
+            {%- endfor -%}
+          </p>
+          <p class="lead">{{ home.intro.summary }}</p>
+
+          <div class="vision">
+            <h2>{{ home.intro.vision_title }}</h2>
+            <p>{{ home.intro.vision }}</p>
+          </div>
+
+        </div>
+
+        <aside class="profile-card" aria-label="Profile summary">
+          <img src="{{ home.profile.image | relative_url }}" alt="{{ home.profile.name }}">
+          <div>
+            <h2>{{ home.profile.role }}, {{ home.profile.affiliation }}</h2>
+            <p>Previously University of Toronto and Google Brain.</p>
+            <ul class="profile-links">
+              {%- for link in home.profile.links -%}
+                <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section id="project" class="section project-section" aria-labelledby="project-title">
+        <div class="section-head">
+          <h2 id="project-title">Core project</h2>
+        </div>
+
+        <article class="project-card">
+          {%- assign project_image = home.project.image -%}
+          <a class="project-image" href="{{ home.project.image_link }}" aria-label="Open the official Veo 3.1 page">
+            <img src="{% if project_image contains '://' %}{{ project_image }}{% else %}{{ project_image | relative_url }}{% endif %}" alt="{{ home.project.image_alt }}">
+          </a>
+          <div class="project-copy">
+            <p class="tag">{{ home.project.eyebrow }}</p>
+            <h3>{{ home.project.title }}</h3>
+            <p class="project-subtitle">{{ home.project.subtitle }}</p>
+            <p>{{ home.project.summary }}</p>
+            <ul class="project-points">
+              {%- for point in home.project.points -%}
+                <li>{{ point }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="work" class="section work-section" aria-labelledby="work-title">
+        <div class="section-head">
+          <h2 id="work-title">Selected work</h2>
+        </div>
+
+        <div class="paper-list">
+          {%- for paper in home.papers -%}
+            {%- assign image = paper.image -%}
+            <article class="paper-card">
+              <a class="paper-image" href="{{ paper.link }}" aria-label="{{ paper.title }}">
+                <img src="{% if image contains '://' %}{{ image }}{% else %}{{ image | relative_url }}{% endif %}" alt="{{ paper.image_alt }}">
+              </a>
+              <div class="paper-copy">
+                <p class="paper-meta">{{ paper.year }} · {{ paper.category }}</p>
+                <h3><a href="{{ paper.link }}">{{ paper.title }}</a></h3>
+                <p class="paper-impact"><strong>Impact:</strong> {{ paper.impact }}</p>
+                <p class="paper-citation">{{ paper.authors }}</p>
+                <p class="paper-venue">{{ paper.venue }}, {{ paper.date }}</p>
+                <div class="paper-links">
+                  <a href="{{ paper.link }}">Paper</a>
+                  {%- if paper.project_link -%}<a href="{{ paper.project_link }}">Project</a>{%- endif -%}
+                  {%- if paper.code -%}<a href="{{ paper.code }}">Code</a>{%- endif -%}
+                </div>
+              </div>
+            </article>
+          {%- endfor -%}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

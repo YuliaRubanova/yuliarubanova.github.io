@@ -1,0 +1,166 @@
+profile:
+  name: Yulia Rubanova
+  role: Staff Research Scientist
+  affiliation: Google DeepMind
+  location: London, UK
+  image: assets/img/yulia_photo.JPG
+  email: "rubanova [~at~] google [~dot~] com"
+  links:
+    - label: Google Scholar
+      url: "https://scholar.google.com/citations?user=u_HzE9wAAAAJ&hl=en"
+    - label: GitHub
+      url: "https://github.com/YuliaRubanova"
+    - label: LinkedIn
+      url: "https://uk.linkedin.com/in/yulia-rubanova-031702100"
+    - label: CV
+      url: "assets/pdf/Yulia_Rubanova_CV_2025.pdf"
+
+intro:
+  eyebrow: Staff Research Scientist · Google DeepMind
+  title: Yulia Rubanova
+  topics:
+    - Video generative models
+    - Controllability
+    - Personalisation
+    - Physical reasoning
+  summary: >-
+    I work on Veo, including reference-to-video and Veo 3.1, building
+    controllable video systems for character consistency, creative production,
+    robotics evaluation, and physical world understanding.
+  vision_title: Research vision
+  vision: >-
+    My research builds toward world models that can predict, simulate, and
+    support action in physical environments. I work on controllable video
+    generation, learned simulation, object-centric scene structure, and
+    robotics evaluation, with the goal of turning generative models into
+    reliable tools for reasoning about the world.
+
+project:
+  eyebrow: Veo R2V · Veo 3.1
+  title: Veo Reference-to-Video
+  subtitle: Reference-driven video generation that preserves identity, motion, and intent.
+  image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/veo-3-1_keyword_blog_header_2096x.width-200.format-webp.webp"
+  image_alt: Veo 3.1 Ingredients to Video visual
+  image_link: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/"
+  summary: >-
+    My work connects reference-to-video generation, physical realism, and
+    evaluation: from consistent characters and objects to video-based robotics
+    simulation.
+  points:
+    - Character and object consistency
+    - Realistic motion, physics, and audio-video generation
+    - World simulation for robotics evaluation and safety testing
+
+papers_intro: >-
+  A short path through the work: Veo as world simulator, Gemini Robotics, video
+  evaluation, 3D control, learned simulation, and Neural ODEs.
+
+papers:
+  - title: Evaluating Gemini Robotics Policies in a Veo World Simulator
+    authors: Gemini Robotics Team, Coline Devin, Yilun Du, Debidatta Dwibedi, Ruiqi Gao, Abhishek Jindal, Thomas Kipf, Sean Kirmani, Fangchen Liu, Anirudha Majumdar, Andrew Marmon, Carolina Parada, Yulia Rubanova, Dhruv Shah, Vikas Sindhwani, Jie Tan, Fei Xia, Ted Xiao, Sherry Yang, Wenhao Yu, Allan Zhou
+    venue: arXiv preprint
+    year: 2025
+    date: December 2025
+    category: Veo world simulator
+    image: "https://lh3.googleusercontent.com/vSMY895gzWpK-nGK2Vn__6OsjX5DIlTkiBBqggd0f-oAw1oNgh5tFPiZPKtSKIONx4UCT7kiop72Nuj0RMrJ-bICxx21SZCG55LlqcqBA-n_znJw%3Dw1440"
+    image_alt: Gemini Robotics policy evaluation in a Veo world simulator
+    link: "https://arxiv.org/abs/2512.10675"
+    impact: Shows Veo can become a scalable robotics evaluation environment, predicting policy rankings, out-of-distribution failures, and safety issues across 1600+ real-world trials.
+  - title: "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer"
+    authors: Gemini Robotics Team and 171 other authors
+    venue: arXiv preprint
+    year: 2025
+    date: October 2025
+    category: Generalist robotics
+    image: assets/img/publication_preview/gemini_robotics_1_5_title.png
+    image_alt: Gemini Robotics 1.5 capabilities preview
+    link: "https://arxiv.org/abs/2510.03342"
+    impact: Advances general-purpose robots with motion transfer across embodiments and multi-level reasoning, connecting world understanding to executable action.
+  - title: Direct Motion Models for Assessing Generated Videos
+    authors: Kelsey Allen, Carl Doersch, Guangyao Zhou, Mohammed Suhail, Danny Driess, Ignacio Rocco, Yulia Rubanova, Thomas Kipf, Mehdi S. M. Sajjadi, Kevin Murphy, Joao Carreira, Sjoerd van Steenkiste
+    venue: arXiv preprint
+    year: 2025
+    date: April 2025
+    category: Video evaluation
+    image: "https://trajan-paper.github.io/static/images/trajan_arch.png"
+    image_alt: Direct Motion Models method diagram
+    link: "https://arxiv.org/abs/2505.00209"
+    project_link: "https://trajan-paper.github.io/"
+    impact: Gives video teams a motion-sensitive evaluation tool that detects temporal failures missed by FVD and localizes where generated videos go wrong.
+  - title: "Neural Assets: 3D-Aware Multi-Object Scene Synthesis with Image Diffusion Models"
+    authors: Ziyi Wu, Yulia Rubanova, Rishabh Kabra, Drew A. Hudson, Igor Gilitschenski, Yusuf Aytar, Sjoerd van Steenkiste, Kelsey R. Allen, Thomas Kipf
+    venue: Advances in Neural Information Processing Systems 37
+    year: 2024
+    date: NeurIPS 2024
+    category: 3D control
+    image: assets/img/publication_preview/neural_assets.gif
+    image_alt: Neural Assets preview
+    link: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/8bc74514d554a90c996576f6c373f5f3-Abstract-Conference.html"
+    project_link: "https://neural-assets-paper.github.io/"
+    impact: Shows how diffusion models can control individual objects by appearance and 3D pose, moving image generation toward editable scene-level assets.
+  - title: Learning rigid-body simulators over implicit shapes for large-scale scenes and vision
+    authors: Yulia Rubanova, Tatiana Lopez-Guevara, Kelsey R. Allen, William F. Whitney, Kimberly Stachenfeld, Tobias Pfaff
+    venue: Advances in Neural Information Processing Systems 37
+    year: 2024
+    date: NeurIPS 2024
+    category: Learned simulation
+    image: assets/img/publication_preview/sdf_sim.gif
+    image_alt: SDF-Sim preview
+    link: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/e3abc125ecacb71786cefb9f67b08c5d-Abstract-Conference.html"
+    project_link: "https://sites.google.com/view/sdf-sim"
+    impact: Scales learned rigid-body simulation to hundreds of objects and detailed shapes, making neural physics more plausible for real scenes.
+  - title: Learning 3D Particle-based Simulators from RGB-D Videos
+    authors: William F. Whitney, Tatiana Lopez-Guevara, Tobias Pfaff, Yulia Rubanova, Thomas Kipf, Kimberly Stachenfeld, Kelsey R. Allen
+    venue: International Conference on Learning Representations
+    year: 2024
+    date: ICLR 2024
+    category: RGB-D dynamics
+    image: assets/img/publication_preview/vpd.gif
+    image_alt: Visual Particle Dynamics preview
+    link: "https://proceedings.iclr.cc/paper_files/paper/2024/hash/d8c653706a0009f187a99bd4e7ea42b8-Abstract-Conference.html"
+    project_link: "https://sites.google.com/view/latent-dynamics"
+    impact: Learns editable 3D dynamics directly from observation, bridging video understanding and simulation without privileged physical state.
+  - title: Learning rigid dynamics with face interaction graph networks
+    authors: Kelsey R. Allen, Yulia Rubanova, Tatiana Lopez-Guevara, William F. Whitney, Alvaro Sanchez-Gonzalez, Peter Battaglia, Tobias Pfaff
+    venue: International Conference on Learning Representations
+    year: 2023
+    date: ICLR 2023
+    category: Contact dynamics
+    image: assets/img/publication_preview/FIGNet_0002.gif
+    image_alt: FIGNet preview
+    link: "https://openreview.net/forum?id=J7Uh781A05p"
+    project_link: "https://sites.google.com/view/fig-net"
+    impact: Makes learned simulators significantly more accurate and efficient for rigid contact, a hard case for neural physical reasoning.
+  - title: Constraint-based graph network simulator
+    authors: Yulia Rubanova, Alvaro Sanchez-Gonzalez, Tobias Pfaff, Peter Battaglia
+    venue: International Conference on Machine Learning
+    year: 2022
+    date: ICML 2022
+    category: Learned simulation
+    image: assets/img/publication_preview/constraint.png
+    image_alt: Constraint-based graph network simulator preview
+    link: "https://proceedings.mlr.press/v162/rubanova22a.html"
+    project_link: "https://sites.google.com/view/constraint-based-simulator"
+    impact: Uses learned constraints and test-time optimization to combine neural simulation with ideas from traditional physics solvers.
+  - title: Latent Ordinary Differential Equations for Irregularly-Sampled Time Series
+    authors: Yulia Rubanova, Ricky T. Q. Chen, David K. Duvenaud
+    venue: Advances in Neural Information Processing Systems 32
+    year: 2019
+    date: NeurIPS 2019
+    category: Neural ODE
+    image: assets/img/publication_preview/latent_ode.png
+    image_alt: Latent ODE preview
+    link: "https://proceedings.neurips.cc/paper_files/paper/2019/hash/42a6845a557bef704ad8ac9cb4461d43-Abstract.html"
+    code: "https://github.com/YuliaRubanova/latent_ode"
+    impact: Extends continuous-time neural dynamics to irregularly sampled time series and latent-variable models.
+  - title: Neural Ordinary Differential Equations
+    authors: Ricky T. Q. Chen, Yulia Rubanova, Jesse Bettencourt, David Duvenaud
+    venue: Advances in Neural Information Processing Systems 31
+    year: 2018
+    date: NeurIPS 2018 · Best Paper Award
+    category: Foundations
+    image: assets/img/publication_preview/neural_ode.png
+    image_alt: Neural ODE preview
+    link: "https://proceedings.neurips.cc/paper_files/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html"
+    code: "https://github.com/rtqichen/torchdiffeq"
+    impact: NeurIPS Best Paper Award winner that introduced continuous-depth neural models and helped establish differentiable dynamics as a foundation for modern ML systems.
