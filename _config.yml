@@ -204,6 +204,7 @@ kramdown:
 include: ['_pages']
 exclude:
   - bin
+  - build_website.sh
   - Gemfile
   - Gemfile.lock
   - vendor
