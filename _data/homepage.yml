@@ -4,12 +4,12 @@ profile:
   affiliation: Google DeepMind
   location: London, UK
   image: assets/img/yulia_photo.JPG
-  email: "rubanova [~at~] google [~dot~] com"
+  email: "yul [~dot] rubanova [~at] gmail [~dot]com"
   links:
     - label: Google Scholar
       url: "https://scholar.google.com/citations?user=u_HzE9wAAAAJ&hl=en"
-    - label: GitHub
-      url: "https://github.com/YuliaRubanova"
+    - label: X
+      url: "https://x.com/YuliaRubanova"
     - label: LinkedIn
       url: "https://uk.linkedin.com/in/yulia-rubanova-031702100"
     - label: CV
@@ -24,7 +24,7 @@ intro:
     - Personalisation
     - Physical reasoning
   summary: >-
-    I work on Veo, including reference-to-video and Veo 3.1, building
+    I work on Veo, including ingredient-to-video and Veo 3.1, building
     controllable video systems for character consistency, creative production,
     robotics evaluation, and physical world understanding.
   vision_title: Research vision
@@ -36,14 +36,14 @@ intro:
     reliable tools for reasoning about the world.
 
 project:
-  eyebrow: Veo R2V · Veo 3.1
-  title: Veo Reference-to-Video
-  subtitle: Reference-driven video generation that preserves identity, motion, and intent.
-  image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/veo-3-1_keyword_blog_header_2096x.width-200.format-webp.webp"
+  eyebrow: Veo Ingredient-to-Video · Veo 3.1
+  title: Veo Ingredient-to-Video
+  subtitle: Ingredient-driven video generation that preserves identity, motion, and intent.
+  image: assets/img/veo_3_1_ingredients_to_video.png
   image_alt: Veo 3.1 Ingredients to Video visual
   image_link: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/"
   summary: >-
-    My work connects reference-to-video generation, physical realism, and
+    My work connects ingredient-to-video generation, physical realism, and
     evaluation: from consistent characters and objects to video-based robotics
     simulation.
   points:
@@ -62,9 +62,11 @@ papers:
     year: 2025
     date: December 2025
     category: Veo world simulator
-    image: "https://lh3.googleusercontent.com/vSMY895gzWpK-nGK2Vn__6OsjX5DIlTkiBBqggd0f-oAw1oNgh5tFPiZPKtSKIONx4UCT7kiop72Nuj0RMrJ-bICxx21SZCG55LlqcqBA-n_znJw%3Dw1440"
-    image_alt: Gemini Robotics policy evaluation in a Veo world simulator
+    media: "https://veo-robotics.github.io/static/videos/banner/banner-nominal.mp4"
+    media_type: video
+    image_alt: Veo world simulator robot policy evaluation demo
     link: "https://arxiv.org/abs/2512.10675"
+    project_link: "https://veo-robotics.github.io/"
     impact: Shows Veo can become a scalable robotics evaluation environment, predicting policy rankings, out-of-distribution failures, and safety issues across 1600+ real-world trials.
   - title: "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer"
     authors: Gemini Robotics Team and 171 other authors
@@ -75,6 +77,7 @@ papers:
     image: assets/img/publication_preview/gemini_robotics_1_5_title.png
     image_alt: Gemini Robotics 1.5 capabilities preview
     link: "https://arxiv.org/abs/2510.03342"
+    image_link: "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
     impact: Advances general-purpose robots with motion transfer across embodiments and multi-level reasoning, connecting world understanding to executable action.
   - title: Direct Motion Models for Assessing Generated Videos
     authors: Kelsey Allen, Carl Doersch, Guangyao Zhou, Mohammed Suhail, Danny Driess, Ignacio Rocco, Yulia Rubanova, Thomas Kipf, Mehdi S. M. Sajjadi, Kevin Murphy, Joao Carreira, Sjoerd van Steenkiste
@@ -82,8 +85,8 @@ papers:
     year: 2025
     date: April 2025
     category: Video evaluation
-    image: "https://trajan-paper.github.io/static/images/trajan_arch.png"
-    image_alt: Direct Motion Models method diagram
+    image: assets/img/publication_preview/trajan_good.gif
+    image_alt: Direct Motion Models good example preview
     link: "https://arxiv.org/abs/2505.00209"
     project_link: "https://trajan-paper.github.io/"
     impact: Gives video teams a motion-sensitive evaluation tool that detects temporal failures missed by FVD and localizes where generated videos go wrong.

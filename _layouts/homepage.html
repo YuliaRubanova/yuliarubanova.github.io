@@ -11,6 +11,14 @@
   </head>
   <body>
     {%- assign home = site.data.homepage -%}
+    {%- assign contact_email = home.profile.email
+      | replace: ' [~at] ', '@'
+      | replace: ' [~dot] ', '.'
+      | replace: ' [~dot]', '.'
+      | replace: ' [~at~] ', '@'
+      | replace: ' [~dot~] ', '.'
+      | replace: ' [~dot~]', '.'
+    -%}
     <header class="site-header">
       <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ home.profile.name }} home">
         <span class="brand-mark">YR</span>
@@ -19,7 +27,7 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#project">Core project</a>
         <a href="#work">Selected work</a>
-        <a href="mailto:{{ site.email | replace: ' [~at~] ', '@' | replace: ' [~dot~] ', '.' }}">Get in touch</a>
+        <a href="mailto:{{ contact_email }}">Get in touch</a>
       </nav>
     </header>
 
@@ -87,10 +95,17 @@
 
         <div class="paper-list">
           {%- for paper in home.papers -%}
-            {%- assign image = paper.image -%}
+            {%- assign image = paper.media | default: paper.image -%}
+            {%- assign media_link = paper.image_link | default: paper.link -%}
             <article class="paper-card">
-              <a class="paper-image" href="{{ paper.link }}" aria-label="{{ paper.title }}">
-                <img src="{% if image contains '://' %}{{ image }}{% else %}{{ image | relative_url }}{% endif %}" alt="{{ paper.image_alt }}">
+              <a class="paper-image" href="{{ media_link }}" aria-label="{{ paper.title }}">
+                {%- if paper.media_type == 'video' -%}
+                  <video autoplay loop muted playsinline aria-label="{{ paper.image_alt }}">
+                    <source src="{{ image }}" type="video/mp4">
+                  </video>
+                {%- else -%}
+                  <img src="{% if image contains '://' %}{{ image }}{% else %}{{ image | relative_url }}{% endif %}" alt="{{ paper.image_alt }}">
+                {%- endif -%}
               </a>
               <div class="paper-copy">
                 <p class="paper-meta">{{ paper.year }} · {{ paper.category }}</p>
