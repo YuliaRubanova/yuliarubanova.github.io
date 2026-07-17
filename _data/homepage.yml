@@ -23,33 +23,53 @@ intro:
     - Controllability
     - Personalisation
     - Physical reasoning
-  summary: >-
-    I work on Veo, including ingredient-to-video and Veo 3.1, building
-    controllable video systems for character consistency, creative production,
-    robotics evaluation, and physical world understanding.
+  summary:
+    - >-
+      I am a researcher at Google DeepMind, working on video generative models
+      in GenAI. I work on pre-training for **Gemini Omni**, a frontier multimodal
+      model released at Google I/O 2026. I focus on new capabilities and
+      controls like reference images, audio, and editing.
+    - >-
+      Before Omni, I worked on **Veo**, including ingredient-to-video and Veo 3.1,
+      building controllable video systems for character consistency, creative
+      production, robotics evaluation, and physical world understanding.
+    - >-
+      I finished my PhD at the University of Toronto with Prof. Quaid Morris
+      and David Duvenaud. I did multiple internships at Google Brain, including
+      projects on discrete-variable RL for protein design and similarity
+      networks for cancer prediction.
   vision_title: Research vision
   vision: >-
-    My research builds toward world models that can predict, simulate, and
-    support action in physical environments. I work on controllable video
-    generation, learned simulation, object-centric scene structure, and
-    robotics evaluation, with the goal of turning generative models into
-    reliable tools for reasoning about the world.
+    Controllability, physical realism and runtime efficiency are crucial next
+    steps for video world models. A leap in controllability is required to turn these models into
+    reliable reasoning tools for real-world applications like robotics and will
+    drive wider adoption of these models.
 
-project:
-  eyebrow: Veo Ingredient-to-Video · Veo 3.1
-  title: Veo Ingredient-to-Video
-  subtitle: Ingredient-driven video generation that preserves identity, motion, and intent.
-  image: assets/img/veo_3_1_ingredients_to_video.png
-  image_alt: Veo 3.1 Ingredients to Video visual
-  image_link: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/"
-  summary: >-
-    My work connects ingredient-to-video generation, physical realism, and
-    evaluation: from consistent characters and objects to video-based robotics
-    simulation.
-  points:
-    - Character and object consistency
-    - Realistic motion, physics, and audio-video generation
-    - World simulation for robotics evaluation and safety testing
+projects:
+  - eyebrow: Google I/O 2026
+    title: Gemini Omni
+    subtitle: A native multimodal generation model for creating and editing video from any multimodal inputs like images, video, audio or text.
+    image: assets/img/gemini_omni.jpg
+    image_alt: Gemini Omni multimodal video generation preview
+    image_fit: crop
+    image_link: "https://deepmind.google/models/gemini-omni/"
+    summary: >-
+      On Gemini Omni, I worked on large-scale pre-training for new
+      reference-driven capabilities, including image and audio conditioning,
+      spanning data generation, training, inference, and evaluation.
+  - eyebrow: Google I/O 2025
+    title: Veo Ingredient-to-Video
+    subtitle: Ingredient-driven video generation that preserves identity, motion, and intent.
+    image: assets/img/veo_3_1_ingredients_to_video.png
+    image_alt: Veo 3.1 Ingredients to Video visual
+    image_link: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/"
+    summary: >-
+      I was a core contributor to building Veo Ingredients from the ground up,
+      enabling videos to be conditioned on **ingredient images** of characters,
+      scenes, objects, textures, lighting, style, and more. I then co-led
+      bringing this capability to Veo 3 and Veo 3.1, where the challenge was
+      extending **character consistency** to videos with **sound**, including
+      speaking characters, for the first time.
 
 papers_intro: >-
   A short path through the work: Veo as world simulator, Gemini Robotics, video
@@ -77,6 +97,7 @@ papers:
     category: Generalist robotics
     image: assets/img/publication_preview/gemini_robotics_1_5_title.png
     image_alt: Gemini Robotics 1.5 capabilities preview
+    image_fit: mobile-contain
     link: "https://arxiv.org/abs/2510.03342"
     image_link: "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
     impact: Advances general-purpose robots with motion transfer across embodiments and multi-level reasoning, connecting world understanding to executable action.
@@ -94,6 +115,7 @@ papers:
   - title: "Neural Assets: 3D-Aware Multi-Object Scene Synthesis with Image Diffusion Models"
     authors: Ziyi Wu, Yulia Rubanova, Rishabh Kabra, Drew A. Hudson, Igor Gilitschenski, Yusuf Aytar, Sjoerd van Steenkiste, Kelsey R. Allen, Thomas Kipf
     venue: Advances in Neural Information Processing Systems 37
+    venue_short: NeurIPS 2024
     year: 2024
     date: NeurIPS 2024
     category: 3D control
@@ -105,6 +127,7 @@ papers:
   - title: Learning rigid-body simulators over implicit shapes for large-scale scenes and vision
     authors: Yulia Rubanova, Tatiana Lopez-Guevara, Kelsey R. Allen, William F. Whitney, Kimberly Stachenfeld, Tobias Pfaff
     venue: Advances in Neural Information Processing Systems 37
+    venue_short: NeurIPS 2024
     year: 2024
     date: NeurIPS 2024
     category: Learned simulation
@@ -116,6 +139,7 @@ papers:
   - title: Learning 3D Particle-based Simulators from RGB-D Videos
     authors: William F. Whitney, Tatiana Lopez-Guevara, Tobias Pfaff, Yulia Rubanova, Thomas Kipf, Kimberly Stachenfeld, Kelsey R. Allen
     venue: International Conference on Learning Representations
+    venue_short: ICLR 2024
     year: 2024
     date: ICLR 2024
     category: RGB-D dynamics
@@ -127,6 +151,7 @@ papers:
   - title: Learning rigid dynamics with face interaction graph networks
     authors: Kelsey R. Allen, Yulia Rubanova, Tatiana Lopez-Guevara, William F. Whitney, Alvaro Sanchez-Gonzalez, Peter Battaglia, Tobias Pfaff
     venue: International Conference on Learning Representations
+    venue_short: ICLR 2023
     year: 2023
     date: ICLR 2023
     category: Contact dynamics
@@ -138,33 +163,40 @@ papers:
   - title: Constraint-based graph network simulator
     authors: Yulia Rubanova, Alvaro Sanchez-Gonzalez, Tobias Pfaff, Peter Battaglia
     venue: International Conference on Machine Learning
+    venue_short: ICML 2022
     year: 2022
     date: ICML 2022
     category: Learned simulation
     image: assets/img/publication_preview/constraint.png
     image_alt: Constraint-based graph network simulator preview
+    image_fit: mobile-contain
     link: "https://proceedings.mlr.press/v162/rubanova22a.html"
     project_link: "https://sites.google.com/view/constraint-based-simulator"
     impact: Uses learned constraints and test-time optimization to combine neural simulation with ideas from traditional physics solvers.
   - title: Latent Ordinary Differential Equations for Irregularly-Sampled Time Series
     authors: Yulia Rubanova, Ricky T. Q. Chen, David K. Duvenaud
     venue: Advances in Neural Information Processing Systems 32
+    venue_short: NeurIPS 2019
     year: 2019
     date: NeurIPS 2019
     category: Latent ODE
     image: assets/img/publication_preview/latent_ode.png
     image_alt: Latent ODE preview
+    image_fit: mobile-contain
     link: "https://proceedings.neurips.cc/paper_files/paper/2019/hash/42a6845a557bef704ad8ac9cb4461d43-Abstract.html"
     code: "https://github.com/YuliaRubanova/latent_ode"
     impact: Extends continuous-time neural dynamics to irregularly sampled time series and latent-variable models.
   - title: Neural Ordinary Differential Equations
     authors: Ricky T. Q. Chen, Yulia Rubanova, Jesse Bettencourt, David Duvenaud
     venue: Advances in Neural Information Processing Systems 31
+    venue_short: NeurIPS 2018
+    award: Best paper award
     year: 2018
     date: NeurIPS 2018 · Best Paper Award
     category: Neural ODE
     image: assets/img/publication_preview/neural_ode.png
     image_alt: Neural ODE preview
+    image_fit: mobile-contain
     link: "https://proceedings.neurips.cc/paper_files/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html"
     code: "https://github.com/rtqichen/torchdiffeq"
     impact: NeurIPS Best Paper Award winner that introduced continuous-depth neural models and helped establish differentiable dynamics as a foundation for modern ML systems.

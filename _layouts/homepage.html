@@ -25,7 +25,7 @@
         <span>{{ home.profile.name }}</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#project">Core project</a>
+        <a href="#project">Core Projects</a>
         <a href="#work">Selected work</a>
         <a href="mailto:{{ contact_email }}">Get in touch</a>
       </nav>
@@ -41,7 +41,9 @@
               <span>{{ topic }}</span>
             {%- endfor -%}
           </p>
-          <p class="lead">{{ home.intro.summary }}</p>
+          {%- for summary in home.intro.summary -%}
+            {{ summary | markdownify | replace: '<p>', '<p class="lead">' }}
+          {%- endfor -%}
 
           <div class="vision">
             <h2>{{ home.intro.vision_title }}</h2>
@@ -54,7 +56,7 @@
           <img src="{{ home.profile.image | relative_url }}" alt="{{ home.profile.name }}">
           <div>
             <h2>{{ home.profile.role }}, {{ home.profile.affiliation }}</h2>
-            <p>Based in {{ home.profile.location }}. Previously University of Toronto and Google Brain.</p>
+            <p>Based in {{ home.profile.location }}. Previously University of Toronto and Google Brain. Co-author of Neural Assets and Neural ODE.</p>
             <ul class="profile-links">
               {%- for link in home.profile.links -%}
                 <li><a href="{{ link.url }}">{{ link.label }}</a></li>
@@ -67,26 +69,32 @@
 
       <section id="project" class="section project-section" aria-labelledby="project-title">
         <div class="section-head">
-          <h2 id="project-title">Core project</h2>
+          <h2 id="project-title">Core Projects</h2>
         </div>
 
-        <article class="project-card">
-          {%- assign project_image = home.project.image -%}
-          <a class="project-image" href="{{ home.project.image_link }}" aria-label="Open the official Veo 3.1 page">
-            <img src="{% if project_image contains '://' %}{{ project_image }}{% else %}{{ project_image | relative_url }}{% endif %}" alt="{{ home.project.image_alt }}">
-          </a>
-          <div class="project-copy">
-            <p class="tag">{{ home.project.eyebrow }}</p>
-            <h3>{{ home.project.title }}</h3>
-            <p class="project-subtitle">{{ home.project.subtitle }}</p>
-            <p>{{ home.project.summary }}</p>
-            <ul class="project-points">
-              {%- for point in home.project.points -%}
-                <li>{{ point }}</li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        </article>
+        <div class="project-list">
+          {%- for project in home.projects -%}
+            <article class="project-card">
+              {%- assign project_image = project.image -%}
+              <a class="project-image{% if project.image_fit %} project-image-{{ project.image_fit }}{% endif %}" href="{{ project.image_link }}" aria-label="Open {{ project.title }} project page">
+                <img src="{% if project_image contains '://' %}{{ project_image }}{% else %}{{ project_image | relative_url }}{% endif %}" alt="{{ project.image_alt }}">
+              </a>
+              <div class="project-copy">
+                <p class="tag">{{ project.eyebrow }}</p>
+                <h3>{{ project.title }}</h3>
+                <p class="project-subtitle">{{ project.subtitle }}</p>
+                {{ project.summary | markdownify }}
+                {%- if project.points -%}
+                  <ul class="project-points">
+                    {%- for point in project.points -%}
+                      <li>{{ point }}</li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </div>
+            </article>
+          {%- endfor -%}
+        </div>
       </section>
 
       <section id="work" class="section work-section" aria-labelledby="work-title">
@@ -99,7 +107,7 @@
             {%- assign image = paper.media | default: paper.image -%}
             {%- assign media_link = paper.image_link | default: paper.link -%}
             <article class="paper-card">
-              <a class="paper-image{% if paper.crop_top %} paper-image-crop-top{% endif %}" href="{{ media_link }}" aria-label="{{ paper.title }}">
+              <a class="paper-image{% if paper.crop_top %} paper-image-crop-top{% endif %}{% if paper.image_fit %} paper-image-{{ paper.image_fit }}{% endif %}" href="{{ media_link }}" aria-label="{{ paper.title }}">
                 {%- if paper.media_type == 'video' -%}
                   <video autoplay loop muted playsinline aria-label="{{ paper.image_alt }}">
                     <source src="{{ image }}" type="video/mp4">
@@ -111,14 +119,20 @@
               <div class="paper-copy">
                 <p class="paper-meta">{{ paper.year }} · {{ paper.category }}</p>
                 <h3><a href="{{ paper.link }}">{{ paper.title }}</a></h3>
-                <p class="paper-impact"><strong>Impact:</strong> {{ paper.impact }}</p>
+                <p class="paper-impact">{{ paper.impact }}</p>
                 <p class="paper-citation">{{ paper.authors }}</p>
-                <p class="paper-venue">{{ paper.venue }}, {{ paper.date }}</p>
-                <div class="paper-links">
-                  <a href="{{ paper.link }}">Paper</a>
-                  {%- if paper.project_link -%}<a href="{{ paper.project_link }}">Project</a>{%- endif -%}
-                  {%- if paper.code -%}<a href="{{ paper.code }}">Code</a>{%- endif -%}
-                </div>
+                <p class="paper-venue">
+                  {%- if paper.venue_short -%}
+                    {{ paper.venue_short }}{% if paper.award %} <span class="paper-award">{{ paper.award }}</span>{% endif %}
+                  {%- else -%}
+                    {{ paper.venue }}, {{ paper.date }}
+                  {%- endif -%}
+                  <span class="paper-inline-links">
+                    <a href="{{ paper.link }}">Paper</a>
+                    {%- if paper.project_link -%}<a href="{{ paper.project_link }}">Project page</a>{%- endif -%}
+                    {%- if paper.code -%}<a href="{{ paper.code }}">Code</a>{%- endif -%}
+                  </span>
+                </p>
               </div>
             </article>
           {%- endfor -%}
