@@ -251,6 +251,10 @@ h1 {
   font-weight: 700;
 }
 
+.email-riddle {
+  color: var(--teal);
+}
+
 .section {
   padding-top: 34px;
   padding-bottom: 34px;

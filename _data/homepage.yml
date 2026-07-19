@@ -4,7 +4,7 @@ profile:
   affiliation: Google DeepMind
   location: London, UK
   image: assets/img/yulia_photo.JPG
-  email: "yul [~dot] rubanova [~at] gmail [~dot] com"
+  email: 'my_first_name[:3] + my_last_name + "@" + "gmail.com"'
   links:
     - label: Google Scholar
       url: "https://scholar.google.com/citations?user=u_HzE9wAAAAJ&hl=en"

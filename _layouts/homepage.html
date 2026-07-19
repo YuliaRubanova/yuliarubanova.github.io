@@ -11,14 +11,6 @@
   </head>
   <body>
     {%- assign home = site.data.homepage -%}
-    {%- assign contact_email = home.profile.email
-      | replace: ' [~at] ', '@'
-      | replace: ' [~dot] ', '.'
-      | replace: ' [~dot]', '.'
-      | replace: ' [~at~] ', '@'
-      | replace: ' [~dot~] ', '.'
-      | replace: ' [~dot~]', '.'
-    -%}
     <header class="site-header">
       <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ home.profile.name }} home">
         <span class="brand-mark">YR</span>
@@ -27,7 +19,7 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#project">Core Projects</a>
         <a href="#work">Selected work</a>
-        <a href="mailto:{{ contact_email }}">Get in touch</a>
+        <a href="#contact">Get in touch</a>
       </nav>
     </header>
 
@@ -52,7 +44,7 @@
 
         </div>
 
-        <aside class="profile-card" aria-label="Profile summary">
+        <aside class="profile-card" id="contact" aria-label="Profile summary">
           <img src="{{ home.profile.image | relative_url }}" alt="{{ home.profile.name }}">
           <div>
             <h2>{{ home.profile.role }}, {{ home.profile.affiliation }}</h2>
@@ -61,7 +53,7 @@
               {%- for link in home.profile.links -%}
                 <li><a href="{{ link.url }}">{{ link.label }}</a></li>
               {%- endfor -%}
-              <li><a href="mailto:{{ contact_email }}">Email</a></li>
+              <li><a href='mailto:{{ home.profile.email }}'>Email</a></li>
             </ul>
           </div>
         </aside>
